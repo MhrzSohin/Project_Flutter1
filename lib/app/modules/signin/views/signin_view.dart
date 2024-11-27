@@ -12,9 +12,8 @@ class SigninView extends GetView<SigninController> {
     return Scaffold(
         appBar: AppBar(),
         body: Container(
-          height: Get.height,
-          decoration:
-              const BoxDecoration(color: Color.fromRGBO(183, 244, 183, 0.929)),
+          // decoration:
+          //     const BoxDecoration(color: Color.fromRGBO(183, 244, 183, 0.929)),
           padding: const EdgeInsets.all(24),
           child: SingleChildScrollView(
             child: Column(
@@ -61,7 +60,7 @@ class SigninView extends GetView<SigninController> {
                     )),
                 Obx(
                   () => TextFormField(
-                    controller: controller.passwordControlelr,
+                    controller: controller.passwordController,
                     obscureText: controller.isPasswordVisible.value,
                     decoration: InputDecoration(
                       hintText: 'Password',
@@ -101,7 +100,7 @@ class SigninView extends GetView<SigninController> {
                       onTap: () {
                         Get.toNamed(Routes.FORGET_PASSWORD, arguments: [
                           controller.userNameController.text,
-                          controller.passwordControlelr.text
+                          controller.passwordController.text
                         ]);
                       },
                       child: const Text(
@@ -116,7 +115,7 @@ class SigninView extends GetView<SigninController> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: ElevatedButton(
                     onPressed: () {
-                      print(controller.passwordControlelr.text);
+                      print(controller.passwordController.text);
                       print(controller.userNameController.text);
                     },
                     style: ElevatedButton.styleFrom(
@@ -128,6 +127,67 @@ class SigninView extends GetView<SigninController> {
                     ),
                     child: const Text("Log in"),
                   ),
+                ),
+                const SizedBox(
+                  height: 31,
+                ),
+                const Text("___________or continue with___________"),
+                Container(
+                    width: double.maxFinite,
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
+                    child: OutlinedButton(
+                      onPressed: () {
+                        //handle onpressed
+                      },
+                      style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          side: const BorderSide(color: Colors.green),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset(
+                            "assets/logo/googlelogo.png",
+                            height: 24,
+                            width: 24,
+                          ),
+                          const SizedBox(width: 11),
+                          const Text(
+                            "Login with Google",
+                            style: TextStyle(fontSize: 16),
+                          ),
+                        ],
+                      ),
+                    )),
+                const SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "Don't have an account?",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(Routes.SIGNUP);
+                      },
+                      child: const Text(
+                        "Sign Up",
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

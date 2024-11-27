@@ -10,7 +10,7 @@ class SigninController extends GetxController {
 
   var isPasswordVisible = false.obs;
   var userNameController = TextEditingController();
-  var passwordControlelr = TextEditingController();
+  var passwordController = TextEditingController();
 
   void increment() => count.value++;
 }

@@ -30,7 +30,7 @@ class HomeView extends GetView<HomeController> {
           ),
 
           const Text(
-            "ARastro",
+            "ARestro",
             style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
           ),
           const SizedBox(
