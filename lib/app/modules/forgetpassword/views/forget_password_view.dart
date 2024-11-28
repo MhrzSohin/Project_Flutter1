@@ -65,7 +65,7 @@ class ForgetPasswordView extends GetView<ForgetPasswordController> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4),
                       )),
-                  child: Text("Send Code")),
+                  child: const Text("Send Code")),
             ),
             const Spacer(),
             Row(
@@ -80,11 +80,12 @@ class ForgetPasswordView extends GetView<ForgetPasswordController> {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.toNamed(Routes.SIGNIN);
+                    Get.offNamed(Routes.SIGNIN);
                   },
                   child: const Text(
                     "Login",
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(
+                        color: Colors.blue, fontWeight: FontWeight.bold),
                   ),
                 )
               ],

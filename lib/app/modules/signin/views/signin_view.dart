@@ -98,7 +98,7 @@ class SigninView extends GetView<SigninController> {
                     ),
                     InkWell(
                       onTap: () {
-                        Get.toNamed(Routes.FORGET_PASSWORD, arguments: [
+                        Get.offNamed(Routes.FORGET_PASSWORD, arguments: [
                           controller.userNameController.text,
                           controller.passwordController.text
                         ]);
@@ -177,7 +177,7 @@ class SigninView extends GetView<SigninController> {
                     ),
                     InkWell(
                       onTap: () {
-                        Get.toNamed(Routes.SIGNUP);
+                        Get.offNamed(Routes.SIGNUP);
                       },
                       child: const Text(
                         "Sign Up",

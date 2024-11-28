@@ -152,7 +152,7 @@ class SignupView extends GetView<SignupController> {
                     ),
                     InkWell(
                       onTap: () {
-                        Get.toNamed(Routes.SIGNIN);
+                        Get.offNamed(Routes.SIGNIN);
                       },
                       child: const Text(
                         "Login",
