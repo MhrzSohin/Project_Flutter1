@@ -115,8 +115,10 @@ class SigninView extends GetView<SigninController> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: ElevatedButton(
                     onPressed: () {
-                      print(controller.passwordController.text);
-                      print(controller.userNameController.text);
+                      if (controller.userNameController.text == "admin" &&
+                          controller.passwordController.text == "admin") {
+                        Get.offAllNamed(Routes.DASHBOARD);
+                      }
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green,
