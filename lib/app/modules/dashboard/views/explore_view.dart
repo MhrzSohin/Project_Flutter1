@@ -21,25 +21,47 @@ class ExploreView extends GetView {
               width: 8,
             ),
             const Text(
-              "A Restro",
+              "ARestro",
               style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
           ],
         ),
         actions: [
-          Icon(Icons.supervised_user_circle),
+          const Icon(
+            Icons.supervised_user_circle,
+            size: 40,
+          ),
           const SizedBox(
             width: 10,
           ),
         ],
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'ExploreView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: Container(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 15,
+              ),
+              Image.asset("assets/logo/bannerhomeview.png"),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: EdgeInsets.all(10),
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Search for food, restaurants..",
+                    prefixIcon: Icon(Icons.search),
+                    suffixIcon: Icon(Icons.mic_none_outlined),
+                    contentPadding: EdgeInsets.symmetric(vertical: 10),
+                    border: OutlineInputBorder(),
+                  ),
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
