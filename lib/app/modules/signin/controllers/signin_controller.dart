@@ -8,7 +8,7 @@ class SigninController extends GetxController {
 
   var isChecked = true.obs;
 
-  var isPasswordVisible = false.obs;
+  var isPasswordVisible = true.obs;
   var userNameController = TextEditingController();
   var passwordController = TextEditingController();
 

@@ -4,7 +4,7 @@ class SignupController extends GetxController {
   //TODO: Implement SignupController
 
   final count = 0.obs;
-    var isPasswordVisible = false.obs;
+  var isPasswordVisible = true.obs;
 
   void increment() => count.value++;
 }
