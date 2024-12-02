@@ -8,21 +8,9 @@ class DashboardController extends GetxController {
 
   final count = 0.obs;
   var currentSelectedTabIndex = 0.obs;
-  var pagelist = [ExploreView(), SearchItemsView(), CartView()];
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  var pagelist = [const ExploreView(), const SearchItemsView(), const CartView()];
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void increment() => count.value++;
 }

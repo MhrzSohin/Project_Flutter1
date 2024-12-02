@@ -8,7 +8,7 @@ class ExploreView extends GetView {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
+        leading: const Icon(Icons.menu),
         title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -24,7 +24,7 @@ class ExploreView extends GetView {
         ),
         actions: [
           ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(50)),
+            borderRadius: const BorderRadius.all(Radius.circular(50)),
             child: Image.asset(
               "assets/logo/userpic.jpg",
               height: 40,
@@ -39,7 +39,7 @@ class ExploreView extends GetView {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             children: [
               const SizedBox(
@@ -50,9 +50,9 @@ class ExploreView extends GetView {
                 height: 10,
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Search for food, restaurants..",
                     prefixIcon: Icon(Icons.search),
                     suffixIcon: Icon(Icons.mic_none_outlined),
@@ -62,7 +62,7 @@ class ExploreView extends GetView {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Row(
                   children: [
                     const Text(
@@ -93,11 +93,11 @@ class ExploreView extends GetView {
                   child: Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -145,11 +145,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -197,11 +197,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -249,11 +249,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -301,11 +301,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -353,11 +353,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -409,25 +409,25 @@ class ExploreView extends GetView {
                 height: 15,
               ),
               Container(
-                padding: EdgeInsets.all(10),
-                child: Row(
+                padding: const EdgeInsets.all(10),
+                child: const Row(
                   children: [
-                    const Text(
+                    Text(
                       "Restaurants Nearby",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10,
                     ),
-                    const Spacer(),
-                    const Text(
+                    Spacer(),
+                    Text(
                       "See all ",
                       style: TextStyle(fontSize: 16, color: Color(0xFF386539)),
                     ),
-                    const Icon(Icons.chevron_right),
+                    Icon(Icons.chevron_right),
                   ],
                 ),
               ),
@@ -437,11 +437,11 @@ class ExploreView extends GetView {
                   child: Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 15,
@@ -454,7 +454,7 @@ class ExploreView extends GetView {
                           children: [
                             ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: Image.asset(
                                 "assets/exploreImages/restro1.jpg",
                                 height: 200,
@@ -485,11 +485,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -502,7 +502,7 @@ class ExploreView extends GetView {
                           children: [
                             ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: Image.asset(
                                 "assets/exploreImages/restro2.jpg",
                                 height: 200,
@@ -533,11 +533,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -550,7 +550,7 @@ class ExploreView extends GetView {
                           children: [
                             ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: Image.asset(
                                 "assets/exploreImages/restro3.jpg",
                                 height: 200,
@@ -581,11 +581,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -598,7 +598,7 @@ class ExploreView extends GetView {
                           children: [
                             ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: Image.asset(
                                 "assets/exploreImages/restro4.jpg",
                                 height: 200,
@@ -629,11 +629,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -646,7 +646,7 @@ class ExploreView extends GetView {
                           children: [
                             ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: Image.asset(
                                 "assets/exploreImages/restro5.jpg",
                                 height: 200,
@@ -677,11 +677,11 @@ class ExploreView extends GetView {
                         width: 15,
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black12,
                               blurRadius: 5,
@@ -694,7 +694,7 @@ class ExploreView extends GetView {
                           children: [
                             ClipRRect(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                                  const BorderRadius.all(Radius.circular(10)),
                               child: Image.asset(
                                 "assets/exploreImages/restro1.jpg",
                                 height: 200,

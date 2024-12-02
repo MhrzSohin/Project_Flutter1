@@ -36,11 +36,11 @@ class SearchItemsView extends GetView {
         ],
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          height: Get.height,
-          width: Get.width,
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      body: Container(
+        height: Get.height,
+        width: Get.width,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -79,7 +79,7 @@ class SearchItemsView extends GetView {
                         borderRadius: BorderRadius.circular(4),
                       ),
                     ),
-                    child: Text("Search")),
+                    child: const Text("Search")),
               ),
               const SizedBox(
                 height: 10,
@@ -97,10 +97,10 @@ class SearchItemsView extends GetView {
                 height: 20,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: const Row(
                   children: [
-                    const Text(
+                    Text(
                       "Popular Restaurants",
                       style: TextStyle(
                         fontSize: 20,
@@ -108,18 +108,18 @@ class SearchItemsView extends GetView {
                       ),
                     ),
                     Spacer(),
-                    const Text("10 Results"),
+                    Text("10 Results"),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 5,
@@ -153,9 +153,9 @@ class SearchItemsView extends GetView {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Restaurant 1",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -174,7 +174,7 @@ class SearchItemsView extends GetView {
                                 ],
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Location",
                                 style: TextStyle(
                                   fontSize: 12,
@@ -182,9 +182,9 @@ class SearchItemsView extends GetView {
                                 ),
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Delicious multi-cuisine meals with a cozy atmosphere.",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.black,
                                 ),
@@ -196,30 +196,30 @@ class SearchItemsView extends GetView {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10), // Add spacing between the rows
-                    Row(
+                    const SizedBox(height: 10),
+                    const Row(
                       children: [
                         Icon(
                           Icons.location_on,
                           color: Colors.green,
                         ),
-                        const SizedBox(width: 5),
-                        const Text("2.2 km from your location"),
-                        const Spacer(),
-                        const Text("Crowded"),
+                        SizedBox(width: 5),
+                        Text("2.2 km from your location"),
+                        Spacer(),
+                        Text("Crowded"),
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 5,
@@ -253,9 +253,9 @@ class SearchItemsView extends GetView {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Restaurant 2",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -274,7 +274,7 @@ class SearchItemsView extends GetView {
                                 ],
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Location",
                                 style: TextStyle(
                                   fontSize: 12,
@@ -282,9 +282,9 @@ class SearchItemsView extends GetView {
                                 ),
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Delicious multi-cuisine meals with a cozy atmosphere.",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.black,
                                 ),
@@ -296,30 +296,30 @@ class SearchItemsView extends GetView {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10), // Add spacing between the rows
-                    Row(
+                    const SizedBox(height: 10),
+                    const Row(
                       children: [
                         Icon(
                           Icons.location_on,
                           color: Colors.green,
                         ),
-                        const SizedBox(width: 5),
-                        const Text("6.7 km from your location"),
-                        const Spacer(),
-                        const Text("Crowded"),
+                        SizedBox(width: 5),
+                        Text("6.7 km from your location"),
+                        Spacer(),
+                        Text("Crowded"),
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 5,
@@ -353,9 +353,9 @@ class SearchItemsView extends GetView {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Restaurant 3",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -374,7 +374,7 @@ class SearchItemsView extends GetView {
                                 ],
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Location",
                                 style: TextStyle(
                                   fontSize: 12,
@@ -382,9 +382,9 @@ class SearchItemsView extends GetView {
                                 ),
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Delicious multi-cuisine meals with a cozy atmosphere.",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.black,
                                 ),
@@ -396,30 +396,30 @@ class SearchItemsView extends GetView {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10), // Add spacing between the rows
-                    Row(
+                    const SizedBox(height: 10),
+                    const Row(
                       children: [
                         Icon(
                           Icons.location_on,
                           color: Colors.green,
                         ),
-                        const SizedBox(width: 5),
-                        const Text("1.6 km from your location"),
-                        const Spacer(),
-                        const Text("Crowded"),
+                        SizedBox(width: 5),
+                        Text("1.6 km from your location"),
+                        Spacer(),
+                        Text("Crowded"),
                       ],
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 5,
@@ -453,9 +453,9 @@ class SearchItemsView extends GetView {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "Restaurant 4",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -474,7 +474,7 @@ class SearchItemsView extends GetView {
                                 ],
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Location",
                                 style: TextStyle(
                                   fontSize: 12,
@@ -482,9 +482,9 @@ class SearchItemsView extends GetView {
                                 ),
                               ),
                               const SizedBox(height: 5),
-                              Text(
+                              const Text(
                                 "Delicious multi-cuisine meals with a cozy atmosphere.",
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.black,
                                 ),
@@ -496,17 +496,217 @@ class SearchItemsView extends GetView {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 10), // Add spacing between the rows
-                    Row(
+                    const SizedBox(height: 10),
+                    const Row(
                       children: [
                         Icon(
                           Icons.location_on,
                           color: Colors.green,
                         ),
-                        const SizedBox(width: 5),
-                        const Text("8.2 km from your location"),
-                        const Spacer(),
-                        const Text("Crowded"),
+                        SizedBox(width: 5),
+                        Text("8.2 km from your location"),
+                        Spacer(),
+                        Text("Crowded"),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 5,
+                      offset: Offset(2, 2),
+                    ),
+                  ],
+                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
+                          child: Image.asset(
+                            "assets/exploreImages/restro4.jpg",
+                            height: 80,
+                            width: 80,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Text(
+                                    "Restaurant 4",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    children: List.generate(5, (index) {
+                                      return Icon(
+                                        index < 5
+                                            ? Icons.star
+                                            : Icons.star_border,
+                                        color: Colors.amber,
+                                        size: 16,
+                                      );
+                                    }),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 5),
+                              const Text(
+                                "Location",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              const Text(
+                                "Delicious multi-cuisine meals with a cozy atmosphere.",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Colors.green,
+                        ),
+                        SizedBox(width: 5),
+                        Text("8.2 km from your location"),
+                        Spacer(),
+                        Text("Crowded"),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 5,
+                      offset: Offset(2, 2),
+                    ),
+                  ],
+                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
+                          child: Image.asset(
+                            "assets/exploreImages/restro5.jpg",
+                            height: 80,
+                            width: 80,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Text(
+                                    "Restaurant 4",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    children: List.generate(5, (index) {
+                                      return Icon(
+                                        index < 5
+                                            ? Icons.star
+                                            : Icons.star_border,
+                                        color: Colors.amber,
+                                        size: 16,
+                                      );
+                                    }),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 5),
+                              const Text(
+                                "Location",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              const Text(
+                                "Delicious multi-cuisine meals with a cozy atmosphere.",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black,
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Colors.green,
+                        ),
+                        SizedBox(width: 5),
+                        Text("8.2 km from your location"),
+                        Spacer(),
+                        Text("Crowded"),
                       ],
                     ),
                   ],
