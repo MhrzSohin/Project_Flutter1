@@ -1,11 +1,51 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+import 'package:flutterproject1/app/modules/dashboard/controllers/cartController.dart';
+import 'package:flutterproject1/app/modules/dashboard/controllers/dataModel.dart';
 
-class ExploreView extends GetView {
+class ExploreView extends StatelessWidget {
   const ExploreView({super.key});
+
   @override
   Widget build(BuildContext context) {
+    // Create an instance of the CartController
+    final CartController cartController = Get.put(CartController());
+
+    // Sample food items list
+    List<FoodItem> foodItems = [
+      FoodItem(
+        name: "Pizza",
+        imagePath: "assets/exploreImages/foodpic1.png",
+        details: "Delicious cheesy pizza",
+        price: 150,
+      ),
+      FoodItem(
+        name: "Burger",
+        imagePath: "assets/exploreImages/foodpic3.png",
+        details: "Tasty beef burger with fries",
+        price: 100,
+      ),
+      FoodItem(
+        name: "Pasta",
+        imagePath: "assets/exploreImages/foodpic3.png",
+        details: "Creamy Alfredo pasta",
+        price: 180,
+      ),
+      FoodItem(
+        name: "Pasta",
+        imagePath: "assets/exploreImages/foodpic4.png",
+        details: "Creamy Alfredo pasta",
+        price: 180,
+      ),
+      FoodItem(
+        name: "Pasta",
+        imagePath: "assets/exploreImages/foodpic1.png",
+        details: "Creamy Alfredo pasta",
+        price: 180,
+      ),
+      // Add more items as needed
+    ];
+
     return Scaffold(
       appBar: AppBar(
         leading: const Icon(Icons.menu),
@@ -88,11 +128,14 @@ class ExploreView extends GetView {
                 ),
               ),
               Container(
+                color: const Color.fromARGB(255, 230, 228, 228),
+                padding: EdgeInsets.all(10),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: [
-                      Container(
+                    children: foodItems.map((item) {
+                      return Container(
+                        margin: const EdgeInsets.only(right: 15),
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -109,304 +152,57 @@ class ExploreView extends GetView {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Image.asset(
-                              "assets/exploreImages/foodpic1.png",
+                              item.imagePath,
                               height: 100,
                               width: 100,
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
-                              "Food 1",
-                              style: TextStyle(
+                            Text(
+                              item.name,
+                              style: const TextStyle(
                                   fontSize: 25, fontWeight: FontWeight.bold),
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
-                              "Some Details",
-                              style: TextStyle(fontSize: 15),
+                            Text(
+                              item.details,
+                              style: const TextStyle(fontSize: 15),
                             ),
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
-                              "Rs 310",
-                              style: TextStyle(
+                            Text(
+                              "Rs ${item.price}",
+                              style: const TextStyle(
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.green),
                             ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 5,
-                              offset: Offset(2, 2),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Image.asset(
-                              "assets/exploreImages/foodpic4.png",
-                              height: 100,
-                              width: 100,
-                            ),
                             const SizedBox(
                               height: 10,
                             ),
-                            const Text(
-                              "Food 2",
-                              style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.bold),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Some Details",
-                              style: TextStyle(fontSize: 15),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Rs 510",
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green),
+                            ElevatedButton(
+                              onPressed: () {
+                                // Add the item to cart
+                                cartController.addToCart(item);
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.green,
+                                foregroundColor: Colors.white,
+                              ),
+                              child: const Text(
+                                "Add to Cart",
+                              ),
                             ),
                           ],
                         ),
-                      ),
-                      const SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 5,
-                              offset: Offset(2, 2),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Image.asset(
-                              "assets/exploreImages/foodpic3.png",
-                              height: 100,
-                              width: 100,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Food 3",
-                              style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.bold),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Some Details",
-                              style: TextStyle(fontSize: 15),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Rs 380",
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 5,
-                              offset: Offset(2, 2),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Image.asset(
-                              "assets/exploreImages/foodpic1.png",
-                              height: 100,
-                              width: 100,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Food 4",
-                              style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.bold),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Some Details",
-                              style: TextStyle(fontSize: 15),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Rs 430",
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 5,
-                              offset: Offset(2, 2),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Image.asset(
-                              "assets/exploreImages/foodpic4.png",
-                              height: 100,
-                              width: 100,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Food 5",
-                              style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.bold),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Some Details",
-                              style: TextStyle(fontSize: 15),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Rs 710",
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 15,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 5,
-                              offset: Offset(2, 2),
-                            ),
-                          ],
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Image.asset(
-                              "assets/exploreImages/foodpic1.png",
-                              height: 100,
-                              width: 100,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Food 6",
-                              style: TextStyle(
-                                  fontSize: 25, fontWeight: FontWeight.bold),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Some Details",
-                              style: TextStyle(fontSize: 15),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            const Text(
-                              "Rs 210",
-                              style: TextStyle(
-                                  fontSize: 22,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.green),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                      );
+                    }).toList(),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 15,
               ),
               Container(
                 padding: const EdgeInsets.all(10),
