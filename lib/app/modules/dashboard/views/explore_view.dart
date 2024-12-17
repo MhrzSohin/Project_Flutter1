@@ -129,7 +129,7 @@ class ExploreView extends StatelessWidget {
               ),
               Container(
                 color: const Color.fromARGB(255, 230, 228, 228),
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(

@@ -11,7 +11,33 @@ class CartView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Cart"),
+        leading: const Icon(Icons.menu),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              "assets/logo/logofull.png",
+              width: 150,
+              height: 150,
+            ),
+            const SizedBox(
+              width: 8,
+            ),
+          ],
+        ),
+        actions: [
+          ClipRRect(
+            borderRadius: const BorderRadius.all(Radius.circular(50)),
+            child: Image.asset(
+              "assets/logo/userpic.jpg",
+              height: 40,
+              width: 40,
+            ),
+          ),
+          const SizedBox(
+            width: 10,
+          ),
+        ],
         centerTitle: true,
       ),
       body: Obx(() {
